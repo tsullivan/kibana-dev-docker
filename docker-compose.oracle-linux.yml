@@ -1,0 +1,7 @@
+version: "3"
+
+services:
+  kibana:
+    build:
+      context: .
+      dockerfile: kibana-dev/oracle-linux.Dockerfile

@@ -1,0 +1,13 @@
+{
+  "name": "kibana-dev-docker",
+  "version": "0.0.1",
+  "main": "index.js",
+  "repository": "git@github.com:tsullivan/kibana-dev-docker.git",
+  "author": "Tim Sullivan <tsullivan@elastic.co>",
+  "license": "MIT",
+  "scripts": {
+    "build:ubuntu": "docker compose up -d --build",
+    "build:oracle": "docker compose -f docker-compose.yml -f docker-compose.oracle-linux.yml up -d --build",
+    "shell": "docker compose exec kibana /bin/bash"
+  }
+}
