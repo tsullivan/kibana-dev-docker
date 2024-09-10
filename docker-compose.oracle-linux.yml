@@ -1,0 +1,7 @@
+# this file only specifies overrides to the main docker compose file, see
+# https://docs.docker.com/compose/multiple-compose-files/merge/
+
+services:
+  kibana:
+    build:
+      dockerfile: ../oracle-linux.Dockerfile
