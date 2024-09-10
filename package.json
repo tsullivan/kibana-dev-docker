@@ -6,8 +6,11 @@
   "author": "Tim Sullivan <tsullivan@elastic.co>",
   "license": "MIT",
   "scripts": {
-    "build:ubuntu": "docker compose up -d --build",
-    "build:oracle": "docker compose -f docker-compose.yml -f docker-compose.oracle-linux.yml up -d --build",
-    "shell": "docker compose exec kibana /bin/bash"
+    "ubuntu": "docker compose --project-name kibana-dev-ubuntu",
+    "oracle": "docker compose -f docker-compose.yml -f docker-compose.oracle-linux.yml --project-name kibana-dev-oracle",
+    "build:ubuntu": "yarn ubuntu up -d --build",
+    "build:oracle": "yarn oracle up -d --build",
+    "shell:ubuntu": "yarn ubuntu exec kibana /bin/bash",
+    "shell:oracle": "yarn oracle exec kibana /bin/bash"
   }
 }

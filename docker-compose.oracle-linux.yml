@@ -1,7 +1,7 @@
-version: "3"
+# this file only specifies overrides to the main docker compose file, see
+# https://docs.docker.com/compose/multiple-compose-files/merge/
 
 services:
   kibana:
     build:
-      context: .
-      dockerfile: kibana-dev/oracle-linux.Dockerfile
+      dockerfile: ../oracle-linux.Dockerfile
